@@ -26,8 +26,8 @@ let filteredUsers = arr => {
         return value.id%2===0
     })
     return filteredArr
-}
-console.log(filteredUsers(users))
+};
+console.log(filteredUsers(users));
 
 // - Взяти масив з  User[] з попереднього завдання, та відсортувати його по id. по зростанню (sort)
 let sortedUsers = arr => {
@@ -35,8 +35,8 @@ let sortedUsers = arr => {
         return user1.id - user2.id
     })
     return sortedArray
-}
-console.log(sortedUsers(users))
+};
+console.log(sortedUsers(users));
 
 // - створити класс для об'єктів Client з полями id, name, surname , email, phone, order (поле є масивом зі списком товарів)
 // створити пустий масив, наповнити його 10 об'єктами Client
@@ -62,7 +62,7 @@ clients[7]= new Client(2, 'Yurii', 'Ivanov', 'tyu@gmail.com', 380679354457, 'ite
 clients[8]= new Client(3, 'Sasha', 'Ivanov', 'tyu@gmail.com', 380679354457, 'item1', 'item2', 'item3', 'item4');
 clients[9]= new Client(10, 'Roman', 'Ivanov', 'tyu@gmail.com', 380679354457, 'item1');
 
-console.log(clients)
+console.log(clients);
 // - Взяти масив (Client [] з попереднього завдання).Відсортувати його по кількості товарів в полі order по зростанню. (sort)
 
 let sortedClients = arr => {
@@ -70,5 +70,5 @@ let sortedClients = arr => {
         return client1.order.length - client2.order.length
     })
     return sortedArray
-}
-console.log(sortedClients(clients))
+};
+console.log(sortedClients(clients));
