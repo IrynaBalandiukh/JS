@@ -54,15 +54,15 @@ btn.onclick = function () {
 // - Сворити масив не цензцрних слів. Сворити інпут текстового типу.
 // Якщо людина вводить слово і воно міститься в масиві не цензурних слів кинути алерт з попередженням. Перевірку робити при натисканні на кнопку
 let array = ['word1', 'word2', 'word3'];
-let text = document.createElement('input');
-text.type = 'text';
-document.body.appendChild(text);
+let yourText = document.createElement('input');
+yourText.type = 'text';
+document.body.appendChild(yourText);
 let check = document.createElement('button');
 check.innerText = 'submit';
 document.body.appendChild(check);
 check.onclick = function () {
     for (let i of array) {
-        if (i === text.value) {
+        if (i === yourText.value) {
             alert('Не використовуйте нецензурну лексику');
         }
     }
@@ -75,7 +75,7 @@ checkSentence.innerText = 'submit sentence';
 document.body.appendChild(checkSentence);
 checkSentence.onclick = function () {
     for (let i of array) {
-        if (text.value.includes(i)) {
+        if (yourText.value.includes(i)) {
             alert('Не використовуйте нецензурну лексику');
         }
     }
