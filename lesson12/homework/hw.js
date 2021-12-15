@@ -15,6 +15,7 @@ fetch('https://jsonplaceholder.typicode.com/posts')
             let postId = document.createElement('div');
             postId.innerText = `Post id - ${post.id}`;
             let title = document.createElement('div');
+            title.classList.add('title');
             title.innerText = `Title - ${post.title}`;
             let text = document.createElement('div');
             text.innerText = `Post - ${post.body}`;
@@ -35,14 +36,17 @@ fetch('https://jsonplaceholder.typicode.com/comments')
         console.log(comments)
             for (let comment of comments) {
             let div = document.createElement('div');
+            div.classList.add('comment-div');
             document.body.appendChild(div);
             let postId = document.createElement('div');
             postId.innerText = comment.postId;
             let userId = document.createElement('div')
             userId.innerText = comment.id;
             let name = document.createElement('div');
+            name.classList.add('name');
             name.innerText = comment.name;
-            let email = document.createElement('div')
+            let email = document.createElement('div');
+            email.classList.add('email');
             email.innerText = comment.email;
             let text = document.createElement('div');
             text.innerText = comment.body;

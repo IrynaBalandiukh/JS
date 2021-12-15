@@ -1,0 +1,22 @@
+.post-div{
+    margin: 15px;
+    padding: 10px;
+    background-color: #6798f1;
+}
+.title{
+    font-size: 18px;
+    font-style: italic;
+    font-weight: bolder;
+}
+.btn{
+    margin: 10px;
+    padding: 5px;
+    border: 3px solid #2654a8;
+    background-color: #9cb9ee;
+    border-radius: 15px;
+}
+.comment-div{
+    margin: 15px;
+    padding: 10px;
+    background-color: #9cb9ee;
+}

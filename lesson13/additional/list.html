@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>List</title>
+</head>
+<body>
+
+
+<script>
+    let itemsArray = JSON.parse(localStorage.getItem('items'));
+    for (let item of itemsArray) {
+        let block = document.createElement('div');
+        let name = document.createElement('div');
+        name.innerText = `Назва товару - ${item.item}`;
+        let number = document.createElement('div');
+        number.innerText = `Кількість товару - ${item.number}`;
+        let cost = document.createElement('div');
+        cost.innerText = `Ціна товару - ${item.cost}`;
+        let picture = document.createElement('img');
+        picture.src = item.picture;
+        let deleteBtn = document.createElement('button');
+        deleteBtn.innerText = 'Видалити товар';
+        document.body.appendChild(block);
+        block.append(name, number, cost, picture, deleteBtn);
+        deleteBtn.onclick = function () {
+            let i = itemsArray.indexOf(item);
+            let deleted = itemsArray.splice(i,1);
+            localStorage.setItem('items', JSON.stringify(itemsArray));
+            location.reload();
+        }
+    }
+
+</script>
+</body>
+</html>

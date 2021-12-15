@@ -4,4 +4,29 @@
 }
 .post{
     margin: 15px;
+    padding: 10px;
+    background-color: #a0f1a0;
+    border: 1px solid #4d804d;
+}
+.post div{
+    margin: 5px;
+}
+.title{
+    font-weight: bold;
+    font-style: italic;
+}
+.comment-div{
+    margin: 15px;
+    padding: 10px;
+    background-color: #fcc99f;
+}
+.comment-div div{
+    margin: 10px;
+}
+.name{
+    font-weight: bolder;
+}
+.email{
+    font-style: italic;
+    font-size: 14px;
 }

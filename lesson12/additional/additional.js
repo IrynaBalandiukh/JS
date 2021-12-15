@@ -7,6 +7,7 @@ fetch('https://jsonplaceholder.typicode.com/users')
 .then(users => {
     for (let user of users) {
         let userBlock = document.createElement('div');
+        userBlock.classList.add('user-block');
         document.body.appendChild(userBlock);
         let userId = document.createElement('div');
         userId.innerText = `User id - ${user.id}`;
@@ -17,6 +18,7 @@ fetch('https://jsonplaceholder.typicode.com/users')
         let email = document.createElement('div');
         email.innerText = `Email - ${user.email}`;
         let showPosts = document.createElement('button');
+        showPosts.classList.add('btn');
         showPosts.innerText = 'Show posts';
         userBlock.append(userId, name, userName, email, showPosts);
         showPosts.onclick = function () {
@@ -25,6 +27,7 @@ fetch('https://jsonplaceholder.typicode.com/users')
                 .then(posts => {
                     for (let post of posts) {
                         let postBlock = document.createElement('div');
+                        postBlock.classList.add('post-block')
                         userBlock.appendChild(postBlock);
                         let postId = document.createElement('div');
                         postId.innerText = `Post id - ${post.id}`;
@@ -34,6 +37,7 @@ fetch('https://jsonplaceholder.typicode.com/users')
                         postText.innerText = post.body;
                         let showComments = document.createElement('button');
                         showComments.innerText = 'Show comments';
+                        showComments.classList.add('btn');
                         postBlock.append(postId, postTitle, postText, showComments);
                         showComments.onclick = function () {
                             fetch('https://jsonplaceholder.typicode.com/posts/'+post.id+'/comments')
@@ -41,6 +45,7 @@ fetch('https://jsonplaceholder.typicode.com/users')
                                 .then(comments => {
                                     for (let comment of comments) {
                                         let commentBlock = document.createElement('div');
+                                        commentBlock.classList.add('comment-block');
                                         postBlock.appendChild(commentBlock);
                                         let commName = document.createElement('div');
                                         commName.innerText = `Name - ${comment.name}`;

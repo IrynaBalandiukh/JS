@@ -8,6 +8,7 @@ fetch('https://jsonplaceholder.typicode.com/posts')
 .then(posts => {
     for (let post of posts) {
         let div = document.createElement('div');
+        div.classList.add('post-div');
         document.body.appendChild(div);
         let userId = document.createElement('div');
         userId.innerText = `User id - ${post.userId}`;
@@ -15,9 +16,11 @@ fetch('https://jsonplaceholder.typicode.com/posts')
         postId.innerText = `Post id - ${post.id}`;
         let title = document.createElement('div');
         title.innerText = `Title - ${post.title}`;
+        title.classList.add('title');
         let text = document.createElement('div');
         text.innerText = `Post - ${post.body}`;
         let btn = document.createElement('button');
+        btn.classList.add('btn');
         btn.innerText = 'Show comments';
         div.append(userId, postId,title, text, btn);
         btn.onclick = function () {
@@ -26,10 +29,11 @@ fetch('https://jsonplaceholder.typicode.com/posts')
                 .then(comments => {
                     for (let comment of comments) {
                         let commentBlock = document.createElement('div');
-                        div.appendChild(commentBlock)
+                        commentBlock.classList.add('comment-div');
+                        div.appendChild(commentBlock);
                         let postId = document.createElement('div');
                         postId.innerText = comment.postId;
-                        let userId = document.createElement('div')
+                        let userId = document.createElement('div');
                         userId.innerText = comment.id;
                         let name = document.createElement('div');
                         name.innerText = comment.name;

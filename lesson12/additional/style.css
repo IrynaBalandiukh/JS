@@ -1,0 +1,22 @@
+.user-block{
+    margin: 15px;
+    padding: 10px;
+    background-color: #dc7c7c;
+}
+.post-block{
+    margin: 15px;
+    padding: 10px;
+    background-color: #e59292;
+}
+.comment-block{
+    margin: 15px;
+    padding: 10px;
+    background-color: #ecbfbf;
+}
+.btn{
+    margin: 10px;
+    padding: 5px;
+    border: 1px solid #592727;
+    border-radius: 20px;
+    background-color: #b94f4f;
+}
